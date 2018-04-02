@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+  <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="cordova.js"></script>
+
+  <!-- your app's js -->
+  <script src="js/app.js"></script>
+</head>
+
+<body ng-app="app" ng-show="userId" ng-controller="MainPageController">
+  <ion-pane>
+    <ion-header-bar class="bar-dark">
+      <button class="button button-clear button-light" ng-click="logout()">Logout</button>
+      <h1 class="title">Add Activity</h1>
+      <button class="button button-clear button-light" ng-click="summary()">Summary</button>
+    </ion-header-bar>
+    <ion-content>
+      <form ng-model="myForm" name="actForm" ng-submit="addActivity(this)">
+        <label class="item item-input item-select">
+          <div class="input-label">
+            <ion-checkbox ng-model="football" style="border:none">Football</ion-checkbox>
+          </div>
+          <select ng-model="time_Football" ng-disabled="!football" ng-init="time_Football='1'">
+            <option ng-selected="!football" ng-disabled="football" ng-value="0">0 hour</option>
+            <option ng-value="0.5">0.5 hour</option>
+            <option ng-selected="football" ng-value="1">1 hour</option>
+            <option ng-value="1.5">1.5 hours</option>
+            <option ng-value="2">2 hours</option>
+            <option ng-value="2.5">2.5 hours</option>
+            <option ng-value="3">3 hours</option>
+          </select>
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            <ion-checkbox ng-model="tennis" style="border:none">Tennis</ion-checkbox>
+          </div>
+          <select ng-model="time_Tennis" ng-disabled="!tennis" ng-init="time_Tennis='1'">
+            <option ng-selected="!tennis" ng-disabled="tennis" ng-value="0">0 hour</option>
+            <option ng-value="0.5">0.5 hour</option>
+            <option ng-selected="tennis" ng-value="1">1 hour</option>
+            <option ng-value="1.5">1.5 hours</option>
+            <option ng-value="2">2 hours</option>
+            <option ng-value="2.5">2.5 hours</option>
+            <option ng-value="3">3 hours</option>
+          </select>
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            <ion-checkbox ng-model="swim" style="border:none">Swimming</ion-checkbox>
+          </div>
+          <select ng-model="time_Swim" ng-disabled="!swim" ng-init="time_Swim='1'">
+            <option ng-selected="!swim" ng-disabled="swim" ng-value="0">0 hour</option>
+            <option ng-value="0.5">0.5 hour</option>
+            <option ng-selected="swim" ng-value="1">1 hour</option>
+            <option ng-value="1.5">1.5 hours</option>
+            <option ng-value="2">2 hours</option>
+            <option ng-value="2.5">2.5 hours</option>
+            <option ng-value="3">3 hours</option>
+          </select>
+        </label>
+        <label class="item item-input item-select">
+          <label class="item item-input item-floating-label" style="border:none">
+            <span class="input-label">Other</span>
+            <input type="text" placeholder="Other" ng-model="other">
+          </label>
+          <select ng-model="time_Other" ng-disabled="!other" ng-init="time_Other='1'">
+            <option ng-selected="!other" ng-disabled="other" ng-value="0">0 hour</option>
+            <option ng-value="0.5">0.5 hour</option>
+            <option ng-selected="other" ng-value="1">1 hour</option>
+            <option ng-value="1.5">1.5 hours</option>
+            <option ng-value="2">2 hours</option>
+            <option ng-value="2.5">2.5 hours</option>
+            <option ng-value="3">3 hours</option>
+          </select>
+        </label>
+        <button type="submit" class="button button-full button-positive">Submit</button>
+      </form>
+    </ion-content>
+  </ion-pane>
+</body>
+
+</html>
