@@ -18,7 +18,10 @@
     "express": "4.16.3",
     "foobar": "^1.1.0",
     "ng-confirm": "^1.1.0",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^3.1.0"
   },
   "cordova": {
     "plugins": {
