@@ -5,7 +5,8 @@
 // the 2nd parameter is an array of 'requires'
 var app = angular.module('app', ['ionic'])
 
-var urlPrefix = 'http://192.168.1.162:8080';
+// var urlPrefix = 'http://192.168.1.162:8080';
+var urlPrefix = 'https://useractivity.herokuapp.com';
 
 app.controller('LoginController', function ($scope, $http) {
   $scope.userId = localStorage.getItem('userId');
