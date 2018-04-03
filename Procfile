@@ -1,1 +1,1 @@
-web: npm install -g ionic@latest && npm start
+web: npm start
