@@ -1,7 +1,0 @@
-{
-    "name": "useractivity",
-    "description": "user activity record",
-    "repository": "https://github.com/leasonliu/useractivity.git",
-    "logo": "",
-    "keywords": ["node", "express", "ionic", "directory"]
-}

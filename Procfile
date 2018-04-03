@@ -1,1 +1,1 @@
-web: npm install @ionic/app-scripts@latest --save-dev
+web: npm install @ionic/app-scripts@0.0.36 --save-dev
