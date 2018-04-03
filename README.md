@@ -1,3 +1,4 @@
 # UserActivity
 
-Ionic 1
+https://useractivity-frontend.herokuapp.com
+login with: user user
