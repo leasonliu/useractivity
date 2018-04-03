@@ -31,5 +31,12 @@
     "platforms": [
       "ios"
     ]
+  },
+  "engines": {
+    "npm": "5.8.0",
+    "node": "8.9.0"
+  },
+  "scripts": {
+    "start": "ionic serve"
   }
 }
