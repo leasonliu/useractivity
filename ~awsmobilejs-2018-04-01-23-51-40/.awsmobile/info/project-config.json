@@ -1,6 +1,0 @@
-{
-	"SourceDir": "/Users/Leason/Documents/Ionic/useractivity",
-	"DistributionDir": "/Users/Leason/Documents/Ionic/useractivity/www/lib",
-	"BuildCommand": "ionic serve",
-	"StartCommand": "ionic serve"
-}
